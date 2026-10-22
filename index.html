@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shopify Store Audit &amp; Development Agency | DigitalCraft</title>
+<meta name="description" content="Free Shopify store audit from a senior Shopify Plus development team. We score your store, find the 3 highest-impact fixes, then re-engineer it to convert. US, UK, Europe &amp; Australia.">
+<link rel="canonical" href="https://www.digitalcraft-agency.com/shopify-store-audit">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#070708">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free Shopify Store Audit | DigitalCraft">
+<meta property="og:description" content="We score your Shopify store, find the 3 highest-impact fixes, then re-engineer it to convert. Free, senior-led, no obligation.">
+<meta property="og:url" content="https://www.digitalcraft-agency.com/shopify-store-audit">
+<meta property="og:image" content="https://www.digitalcraft-agency.com/assets/brand/og-shopify-audit.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Shopify Store Audit | DigitalCraft">
+<meta name="twitter:description" content="We score your Shopify store, find the 3 highest-impact fixes, then re-engineer it to convert.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"DigitalCraft Agency","url":"https://www.digitalcraft-agency.com/","image":"https://www.digitalcraft-agency.com/assets/brand/logo-mark.png","email":"info@digitalcraft-agency.com","description":"Shopify and Shopify Plus store audits, design and development for established eCommerce brands.","areaServed":["United States","United Kingdom","Europe","Canada","Australia"],"priceRange":"$$$","makesOffer":{"@type":"Offer","name":"Free Shopify store audit","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"Shopify store audit and development","provider":{"@type":"Organization","name":"DigitalCraft Agency"},"areaServed":"Worldwide","description":"A senior-led teardown of your live Shopify store, the three highest-impact fixes, and a clear next step, followed by custom Shopify design and development."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is the free store review really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. The store review is free and no-obligation. You get a senior-led review of your live store, the three highest-impact fixes, and a clear next step, usually within one business day."}},{"@type":"Question","name":"Can you build a new Shopify store from scratch, or migrate me to Shopify?","acceptedAnswer":{"@type":"Answer","text":"Yes. We design and build new Shopify stores, including Shopify Plus, and can plan a move from another platform. We start with your catalogue, brand and goals, then agree scope before development."}},{"@type":"Question","name":"Do you work on Shopify and Shopify Plus?","acceptedAnswer":{"@type":"Answer","text":"Yes. We are a Shopify Plus partner and work across Shopify and Shopify Plus, from theme builds to custom functionality, subscriptions, B2B and integrations."}},{"@type":"Question","name":"Do I own the work you build?","acceptedAnswer":{"@type":"Answer","text":"Completely. You own all code, design files and accounts, with no lock-in and optional ongoing support."}},{"@type":"Question","name":"How long does a Shopify build take?","acceptedAnswer":{"@type":"Answer","text":"Most builds run four to ten weeks depending on scope. We map a realistic timeline up front and keep you updated at every stage."}}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Space Grotesk';font-weight:300 700;font-display:swap;src:url(fonts/space-grotesk.woff2) format('woff2')}
+@font-face{font-family:'Montserrat';font-weight:400 700;font-display:swap;src:url(fonts/montserrat.woff2) format('woff2')}
+:root{
+  --ink:#070708; --panel:#0c0d0f; --panel-2:#101114; --bone:#ECEAE3; --dim:#8c8f96; --faint:#4a4d54;
+  --line:rgba(236,234,227,.11); --line-2:rgba(236,234,227,.22);
+  --signal:linear-gradient(100deg,#2BD576,#10B3B0,#2E7CF6,#E84C9A,#F6A63C);
+  --red:#F2584B; --amber:#F6A63C; --live:#2BD576;
+  --disp:'Space Grotesk',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace; --body:'Montserrat',system-ui,sans-serif;
+  --gut:clamp(18px,4vw,56px); --max:1320px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--bone);font:400 16px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+::selection{background:var(--bone);color:var(--ink)}
+.wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--gut)}
+.mono{font-family:var(--mono);text-transform:uppercase;letter-spacing:.16em;font-size:11px;color:var(--dim)}
+.sig{background:var(--signal);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sig 7s linear infinite}
+@keyframes sig{to{background-position:220% 0}}
+
+/* coordinate grid backdrop */
+.grid-bg{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:clamp(70px,9vw,120px) clamp(70px,9vw,120px);-webkit-mask:radial-gradient(130% 100% at 50% 0,#000 35%,transparent 80%);mask:radial-gradient(130% 100% at 50% 0,#000 35%,transparent 80%);opacity:.5}
+.noise{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.04;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* HUD top bar */
+.hud{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px var(--gut);border-bottom:1px solid var(--line);background:rgba(7,7,8,.72);backdrop-filter:blur(12px)}
+.hud .b{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.hud img{height:22px;width:auto}
+.hud .live{display:inline-flex;align-items:center;gap:7px;color:var(--live)}
+.hud .live i{width:7px;height:7px;border-radius:50%;background:var(--live);box-shadow:0 0 10px var(--live);animation:blink 1.4s steps(1) infinite}
+@keyframes blink{50%{opacity:.25}}
+.hud .mid{color:var(--faint)}
+.hud .cta{font-family:var(--mono);font-size:11px;letter-spacing:.14em;border:1px solid var(--line-2);border-radius:4px;padding:8px 14px;color:var(--bone);transition:.3s}
+.hud .cta:hover{background:var(--bone);color:var(--ink)}
+@media(max-width:760px){.hud .mid{display:none}}
+
+main{position:relative;z-index:2}
+.mod{padding-block:clamp(70px,11vw,150px);position:relative}
+.mod-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;border-bottom:1px solid var(--line);padding-bottom:18px;flex-wrap:wrap}
+.mod-head .idx{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--dim)}
+.mod-head h2{font-family:var(--disp);font-weight:600;font-size:clamp(30px,4.8vw,64px);letter-spacing:-.04em;line-height:.95;margin:10px 0 0}
+.mod-head .note{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--faint);text-align:right}
+
+.btn{display:inline-flex;align-items:center;gap:10px;height:56px;padding:0 28px;border-radius:6px;font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;transition:transform .3s cubic-bezier(.19,1,.22,1),background .3s,color .3s,border-color .3s}
+.btn-p{background:var(--bone);color:var(--ink);font-weight:700}
+.btn-p:hover{transform:translateY(-2px)}
+.btn-o{border:1px solid var(--line-2);color:var(--bone)}
+.btn-o:hover{border-color:var(--bone)}
+.cursor{display:inline-block;width:.6ch;height:1em;background:var(--live);vertical-align:-2px;margin-left:3px;animation:blink 1s steps(1) infinite}
+
+/* ===== HERO / MODULE 01 ===== */
+.hero{padding-top:118px;min-height:100vh;display:flex;align-items:center}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,4vw,64px);align-items:center;width:100%}
+.scan-label{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--dim);display:flex;align-items:center;gap:10px}
+.scan-label::before{content:"";width:34px;height:1px;background:var(--line-2)}
+.hero h1{font-family:var(--disp);font-weight:600;font-size:clamp(42px,6.6vw,96px);line-height:.92;letter-spacing:-.045em;margin:24px 0 0}
+.hero p.lede{color:var(--dim);font-size:clamp(16px,1.4vw,19px);max-width:46ch;margin:26px 0 0;line-height:1.6}
+.hero .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.readout{display:flex;gap:30px;margin-top:34px;flex-wrap:wrap}
+.readout .r{font-family:var(--mono)}
+.readout .r b{font-family:var(--disp);font-weight:600;font-size:clamp(22px,2.4vw,30px);letter-spacing:-.02em;display:block}
+.readout .r span{font-size:10px;letter-spacing:.14em;color:var(--faint);text-transform:uppercase}
+
+/* gauge instrument */
+.instr{position:relative;border:1px solid var(--line);border-radius:12px;background:linear-gradient(180deg,var(--panel),var(--ink));padding:26px;overflow:hidden}
+.instr::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 70% 10%,rgba(46,124,246,.16),transparent 70%);pointer-events:none}
+.instr .top{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--dim);position:relative}
+.gauge{position:relative;width:min(300px,64vw);aspect-ratio:1;margin:14px auto 6px}
+.gauge svg{width:100%;height:100%;transform:rotate(-90deg)}
+.gauge .score{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.gauge .score b{font-family:var(--disp);font-weight:600;font-size:clamp(52px,9vw,78px);letter-spacing:-.05em;line-height:1}
+.gauge .score .lab{font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--dim);margin-top:2px}
+.gauge .score .tag{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--red);margin-top:8px;border:1px solid rgba(242,88,75,.4);border-radius:99px;padding:4px 10px}
+.bars{display:grid;gap:10px;margin-top:14px;position:relative}
+.bar{display:grid;grid-template-columns:90px 1fr 40px;align-items:center;gap:12px;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--dim)}
+.bar .t{height:4px;border-radius:99px;background:rgba(236,234,227,.08);overflow:hidden}
+.bar .t i{display:block;height:100%;width:0;border-radius:99px;transition:width 1.1s cubic-bezier(.19,1,.22,1)}
+.bar .v{text-align:right;color:var(--bone)}
+
+/* ===== FINDINGS / MODULE 02 ===== */
+.finds{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:48px;border-radius:12px;overflow:hidden}
+.find{background:var(--panel);padding:30px clamp(22px,3vw,38px);display:flex;flex-direction:column;gap:14px;position:relative;transition:background .4s}
+.find:hover{background:var(--panel-2)}
+.find .ln{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--dim)}
+.find .sev{display:inline-flex;align-items:center;gap:6px}
+.find .sev i{width:7px;height:7px;border-radius:50%}
+.sev.hi i{background:var(--red);box-shadow:0 0 8px var(--red)}.sev.hi{color:var(--red)}
+.sev.md i{background:var(--amber)}.sev.md{color:var(--amber)}
+.find h3{font-family:var(--disp);font-weight:600;font-size:clamp(20px,2.1vw,26px);letter-spacing:-.02em;margin:0}
+.find p{color:var(--dim);font-size:14.5px;margin:0}
+.find .fix{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--live);margin-top:auto;padding-top:8px}
+.find .big{position:absolute;top:18px;right:22px;font-family:var(--disp);font-weight:700;font-size:48px;color:rgba(236,234,227,.05);letter-spacing:-.04em}
+
+/* ===== THE FIX / MODULE 03 ===== */
+.fixes{margin-top:40px;border-top:1px solid var(--line)}
+.fix-row{display:grid;grid-template-columns:70px 1fr 1.1fr 180px;gap:24px;align-items:center;padding:30px 0;border-bottom:1px solid var(--line);transition:padding .35s,background .35s}
+.fix-row:hover{padding-inline:18px;background:linear-gradient(90deg,rgba(236,234,227,.03),transparent)}
+.fix-row .no{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.fix-row h3{font-family:var(--disp);font-weight:600;font-size:clamp(22px,2.6vw,34px);letter-spacing:-.025em;margin:0}
+.fix-row p{color:var(--dim);font-size:14.5px;margin:0}
+.fix-row .tags{display:flex;flex-wrap:wrap;gap:7px;justify-content:flex-end}
+.fix-row .tags span{font-family:var(--mono);font-size:10px;letter-spacing:.08em;border:1px solid var(--line-2);border-radius:99px;padding:5px 10px;color:var(--dim)}
+@media(max-width:860px){.fix-row{grid-template-columns:48px 1fr;gap:10px}.fix-row p,.fix-row .tags{grid-column:2}.fix-row .tags{justify-content:flex-start;margin-top:6px}}
+
+/* ===== EVIDENCE / MODULE 04 ===== */
+.evidence{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.spec{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel);transition:transform .45s cubic-bezier(.19,1,.22,1),border-color .4s}
+.spec:hover{transform:translateY(-6px);border-color:var(--line-2)}
+.spec .im{aspect-ratio:4/3;overflow:hidden;position:relative;background:#16171a}
+.spec .im img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.spec:hover .im img{transform:scale(1.05)}
+.spec .im .tag{position:absolute;top:12px;left:12px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;background:rgba(7,7,8,.8);border:1px solid var(--line-2);border-radius:4px;padding:5px 9px;color:var(--bone)}
+.spec .b{padding:22px 24px 26px}
+.spec .b .mono{display:block;margin-bottom:10px}
+.spec .b .num{font-family:var(--disp);font-weight:600;font-size:clamp(34px,4vw,52px);letter-spacing:-.04em;line-height:1}
+.spec .b p{color:var(--dim);font-size:13.5px;margin:10px 0 0}
+.tally{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:12px;margin-top:20px;overflow:hidden;background:var(--panel)}
+.tally .c{padding:30px 26px;border-left:1px solid var(--line)}
+.tally .c:first-child{border-left:0}
+.tally .c b{font-family:var(--disp);font-weight:600;font-size:clamp(30px,3.6vw,50px);letter-spacing:-.04em;display:block}
+.tally .c span{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--dim);text-transform:uppercase;margin-top:8px;display:block}
+
+/* ===== CTA / MODULE 05 ===== */
+.req{text-align:center;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,var(--panel),var(--ink));padding:clamp(48px,7vw,90px) var(--gut);position:relative;overflow:hidden;margin-top:30px}
+.req::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 60% at 50% 0,rgba(46,124,246,.18),transparent 70%);pointer-events:none}
+.req .mono{justify-self:center}
+.req h2{font-family:var(--disp);font-weight:600;font-size:clamp(34px,6vw,86px);letter-spacing:-.04em;line-height:.95;margin:16px auto 0;max-width:16ch;position:relative}
+.req p{color:var(--dim);max-width:46ch;margin:22px auto 0;position:relative}
+.req .cta-row{display:flex;gap:14px;justify-content:center;margin-top:36px;flex-wrap:wrap;position:relative}
+
+.ftr{border-top:1px solid var(--line);padding-block:34px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--faint);text-transform:uppercase}
+
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+
+/* ---- tighter section rhythm ---- */
+.mod{padding-block:clamp(46px,6vw,88px)}
+.hero.mod{padding-top:108px;min-height:auto}
+
+/* ---- TRUST STRIP ---- */
+.trust{border-block:1px solid var(--line);background:var(--panel);position:relative;z-index:2}
+.trust-in{display:flex;align-items:center;gap:clamp(16px,2.6vw,36px);padding-block:16px;flex-wrap:wrap}
+.trust .tl{flex:none;color:var(--faint)}
+.tlogos{display:flex;align-items:center;gap:clamp(16px,2.6vw,34px);flex-wrap:wrap;flex:1;list-style:none;margin:0;padding:0}
+.tlogos li{height:20px;display:flex;align-items:center}
+.tlogos img{height:100%;width:auto;max-width:112px;object-fit:contain;filter:brightness(0) invert(1);opacity:.5;transition:opacity .3s}
+.tlogos img:hover{opacity:.95}
+.tbadge{flex:none;display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line-2);border-radius:99px;padding:7px 13px;color:var(--bone)}
+.tbadge i{width:7px;height:7px;border-radius:50%;background:var(--live);box-shadow:0 0 8px var(--live)}
+
+/* ---- FIELD REPORTS ---- */
+.reports{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.report{margin:0;border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:26px 26px 24px;display:flex;flex-direction:column;gap:18px;transition:transform .4s cubic-bezier(.19,1,.22,1),border-color .4s}
+.report:hover{transform:translateY(-5px);border-color:var(--line-2)}
+.report .rtop{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.report .stars{color:var(--amber);font-size:12px;letter-spacing:2px;flex:none}
+.report blockquote{margin:0;font-family:var(--disp);font-weight:500;font-size:clamp(16px,1.5vw,19px);line-height:1.45;letter-spacing:-.01em}
+.report figcaption{display:flex;align-items:center;gap:12px;margin-top:auto}
+.report figcaption img{width:42px;height:42px;border-radius:50%;object-fit:cover}
+.report b{display:block;font-family:var(--disp);font-weight:600;font-size:14px}
+.report small{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--dim);text-transform:uppercase}
+
+/* ---- PROTOCOL / FAQ ---- */
+.faq{margin-top:40px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:22px 0;font-family:var(--disp);font-weight:600;font-size:clamp(17px,1.8vw,22px);letter-spacing:-.02em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pm{font-family:var(--mono);color:var(--dim);transition:transform .3s;flex:none}
+.faq details[open] summary .pm{transform:rotate(45deg);color:var(--live)}
+.faq p{color:var(--dim);font-size:15px;margin:0 0 22px;max-width:70ch}
+
+/* ---- URGENCY + FORM + GUARANTEES ---- */
+.urg{position:relative;display:inline-flex;align-items:center;gap:9px;margin-top:4px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);border:1px solid rgba(246,166,60,.35);border-radius:99px;padding:7px 14px}
+.urg b{color:var(--bone)}
+.urg .udot{width:7px;height:7px;border-radius:50%;background:var(--amber);box-shadow:0 0 8px var(--amber);animation:blink 1.4s steps(1) infinite}
+.auditform{position:relative;display:flex;gap:10px;max-width:520px;margin:30px auto 0;flex-wrap:wrap}
+.auditform input{flex:1;min-width:200px;height:56px;background:var(--ink);border:1px solid var(--line-2);border-radius:6px;color:var(--bone);font:400 15px var(--body);padding:0 18px}
+.auditform input::placeholder{color:var(--faint)}
+.auditform input:focus{outline:none;border-color:var(--bone)}
+.auditform .btn{flex:none}
+.guar{position:relative;display:flex;gap:10px 22px;justify-content:center;flex-wrap:wrap;margin-top:22px;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+.guar span{display:inline-flex;align-items:center;gap:7px}
+.guar span::before{content:"◆";color:var(--live);font-size:8px}
+
+@media(max-width:920px){
+  .hero-grid,.finds,.evidence,.tally,.reports{grid-template-columns:1fr}
+  .tally .c{border-left:0;border-top:1px solid var(--line)}
+  .instr{margin-top:8px}
+}
+@media(max-width:560px){
+  .hero h1{font-size:clamp(34px,10.5vw,46px)}
+  .mod-head h2,.req h2{font-size:clamp(28px,9vw,40px)}
+  .trust-in{gap:14px}.tbadge{order:-1}
+  .readout{gap:22px}
+  .auditform .btn{width:100%}
+  .find .big{display:none}
+}
+
+/* ---- hero headline: clean wrapping on every screen ---- */
+.hh1{text-wrap:balance}
+.hh1 .cl{display:inline-block}
+
+/* ---- TRACKS (build / grow / maintain) ---- */
+.tracks{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.track{border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:28px clamp(22px,2.4vw,30px);display:flex;flex-direction:column;gap:14px;transition:transform .4s cubic-bezier(.19,1,.22,1),border-color .4s,box-shadow .4s}
+.track:hover{transform:translateY(-6px);border-color:var(--line-2);box-shadow:0 30px 60px -36px rgba(46,124,246,.5)}
+.track .ttop{display:flex;justify-content:space-between;align-items:center}
+.track .ttop .mono{color:var(--dim)}
+.track .tn{font-family:var(--disp);font-weight:700;font-size:34px;color:rgba(236,234,227,.07);letter-spacing:-.04em}
+.track h3{font-family:var(--disp);font-weight:600;font-size:clamp(22px,2.3vw,28px);letter-spacing:-.025em;margin:0}
+.track>p{color:var(--dim);font-size:14.5px;margin:0}
+.track ul{list-style:none;margin:4px 0 0;padding:14px 0 0;display:grid;gap:8px;border-top:1px solid var(--line)}
+.track li{font-family:var(--mono);font-size:11px;letter-spacing:.03em;color:var(--dim);display:flex;gap:9px;align-items:center;text-transform:none}
+.track li::before{content:"▸";color:var(--live);font-size:10px}
+.track .tcta{margin-top:auto;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--bone);border-top:1px solid var(--line);padding-top:16px;transition:color .3s}
+.track .tcta:hover{color:var(--live)}
+
+/* ---- "or" divider ---- */
+.orline{max-width:520px;margin:24px auto 0;text-align:center;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+
+@media(max-width:920px){.tracks{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="grid-bg"></div><div class="noise"></div>
+
+<header class="hud">
+  <div class="b"><img src="img/mark.png" alt=""> DigitalCraft <span class="mid">// Store Audit System</span></div>
+  <div class="b mid">v2.6 · Shopify Plus Partner · lat 22.30 / lon 70.80</div>
+  <a class="cta" href="https://calendly.com/digitalcraaft-agency/30min" target="_blank" rel="noopener">Book a call →</a>
+</header>
+
+<main>
+<!-- MODULE 01 — THE SCAN -->
+<section class="hero mod" id="scan">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="scan-label">Shopify · build / grow / maintain</div>
+      <h1 class="hh1"><span class="cl">Build&nbsp;it.</span> <span class="cl">Grow&nbsp;it.</span> <span class="cl sig">Keep&nbsp;it&nbsp;sharp.</span></h1>
+      <p class="lede">One senior Shopify team to launch a new store, re‑engineer the one you have, and keep it shipping. &nbsp;<span class="mono" style="color:var(--dim)">You need:&nbsp;</span><span id="type" style="color:var(--bone)"></span><span class="cursor"></span></p>
+      <div class="cta-row">
+        <a class="btn btn-p" href="https://calendly.com/digitalcraaft-agency/30min" target="_blank" rel="noopener">Book a 30‑min call</a>
+        <a class="btn btn-o" href="#tracks">See the tracks</a>
+      </div>
+      <div class="readout">
+        <div class="r"><b class="sig" data-count="18" data-suffix="%">0%</b><span>Avg. CVR lift</span></div>
+        <div class="r"><b data-count="1.4" data-suffix="s" data-dec="1">0s</b><span>Faster mobile</span></div>
+        <div class="r"><b data-count="150" data-suffix="K+">0</b><span>Customers served</span></div>
+      </div>
+    </div>
+
+    <div class="instr rv">
+      <div class="top"><span>◉ REC · store-health.scan</span><span id="scanpct">0%</span></div>
+      <div class="gauge">
+        <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" fill="none" stroke="rgba(236,234,227,.08)" stroke-width="8"/><circle id="ring" cx="60" cy="60" r="52" fill="none" stroke="url(#g)" stroke-width="8" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="326.7"/><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F2584B"/><stop offset="1" stop-color="#F6A63C"/></linearGradient></defs></svg>
+        <div class="score"><b id="scoreN">0</b><span class="lab">Store health · /100</span><span class="tag">Needs work</span></div>
+      </div>
+      <div class="bars">
+        <div class="bar"><span>Conversion</span><span class="t"><i data-w="34" style="background:var(--red)"></i></span><span class="v">34</span></div>
+        <div class="bar"><span>Mobile speed</span><span class="t"><i data-w="41" style="background:var(--amber)"></i></span><span class="v">41</span></div>
+        <div class="bar"><span>Merch / PDP</span><span class="t"><i data-w="52" style="background:var(--amber)"></i></span><span class="v">52</span></div>
+        <div class="bar"><span>Retention</span><span class="t"><i data-w="38" style="background:var(--red)"></i></span><span class="v">38</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust">
+  <div class="wrap trust-in">
+    <span class="mono tl">Audited &amp; re-engineered for</span>
+    <ul class="tlogos">
+      <li><img src="img/logo-fuelyourbody.svg" alt="FuelYourBody" loading="lazy"></li>
+      <li><img src="img/logo-hanson.svg" alt="Hanson of Sonoma" loading="lazy"></li>
+      <li><img src="img/logo-babygains-t.png" alt="Baby Gains" loading="lazy"></li>
+      <li><img src="img/logo-matchaflix.svg" alt="Matchaflix" loading="lazy"></li>
+      <li><img src="img/logo-elvylab.avif" alt="ElvyLab" loading="lazy"></li>
+      <li><img src="img/logo-strike.webp" alt="StrikeFunnels" loading="lazy"></li>
+    </ul>
+    <span class="tbadge"><i></i>Shopify Plus Partner</span>
+  </div>
+</div>
+
+<!-- MODULE — TRACKS -->
+<section class="mod" id="tracks">
+  <div class="wrap">
+    <div class="mod-head rv">
+      <div><div class="idx">Module 01b</div><h2>Where are you?</h2></div>
+      <div class="note">three ways in<br>book a call from any</div>
+    </div>
+    <div class="tracks">
+      <article class="track rv">
+        <div class="ttop"><span class="mono">Track A · Build</span><span class="tn">01</span></div>
+        <h3>Launch a new store</h3>
+        <p>Starting out or moving to Shopify. We design and build a custom store, ready to sell.</p>
+        <ul><li>Custom design &amp; build</li><li>Shopify / Shopify Plus</li><li>Migration &amp; launch QA</li></ul>
+        <a class="tcta" href="https://calendly.com/digitalcraaft-agency/30min" target="_blank" rel="noopener">Book a build call →</a>
+      </article>
+      <article class="track rv">
+        <div class="ttop"><span class="mono">Track B · Grow</span><span class="tn">02</span></div>
+        <h3>Grow the store you have</h3>
+        <p>Already live but leaving money on the table. We review it, then re‑engineer what matters.</p>
+        <ul><li>Free store review first</li><li>Redesign, PDP &amp; CRO</li><li>Mobile &amp; speed fixes</li></ul>
+        <a class="tcta" href="https://calendly.com/digitalcraaft-agency/30min" target="_blank" rel="noopener">Book a growth call →</a>
+      </article>
+      <article class="track rv">
+        <div class="ttop"><span class="mono">Track C · Maintain</span><span class="tn">03</span></div>
+        <h3>Keep it shipping</h3>
+        <p>Need a dependable team on call. We handle support, integrations and new features, ongoing.</p>
+        <ul><li>Ongoing development</li><li>Support &amp; fixes</li><li>Integrations &amp; features</li></ul>
+        <a class="tcta" href="https://calendly.com/digitalcraaft-agency/30min" target="_blank" rel="noopener">Book a support call →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- MODULE 02 — FINDINGS -->
+<section class="mod" id="findings">
+  <div class="wrap">
+    <div class="mod-head rv">
+      <div><div class="idx">Module 02</div><h2>Findings.</h2></div>
+      <div class="note">6 issues detected<br>sorted by revenue impact</div>
+    </div>
+    <div class="finds">
+      <article class="find rv"><span class="big">01</span><div class="ln"><span>PDP-01</span><span class="sev hi"><i></i>High</span></div><h3>Product pages that don't sell</h3><p>Shoppers can't tell what a product is, why it's worth it, or what to do next.</p><span class="fix">▸ Fix: value-led PDP rebuild</span></article>
+      <article class="find rv"><span class="big">02</span><div class="ln"><span>MOB-02</span><span class="sev hi"><i></i>High</span></div><h3>Mobile that falls short</h3><p>Most traffic is on a phone, yet nav, galleries and checkout are tuned for desktop.</p><span class="fix">▸ Fix: mobile-first re-engineer</span></article>
+      <article class="find rv"><span class="big">03</span><div class="ln"><span>BRD-03</span><span class="sev md"><i></i>Medium</span></div><h3>A storefront that looks dated</h3><p>The brand grew up; the theme, spacing and components didn't keep pace.</p><span class="fix">▸ Fix: custom theme + design system</span></article>
+      <article class="find rv"><span class="big">04</span><div class="ln"><span>CMP-04</span><span class="sev md"><i></i>Medium</span></div><h3>Campaigns on generic pages</h3><p>Paid and email traffic lands on templates, not pages built for the offer.</p><span class="fix">▸ Fix: dedicated landing pages</span></article>
+      <article class="find rv"><span class="big">05</span><div class="ln"><span>FNC-05</span><span class="sev hi"><i></i>High</span></div><h3>Functionality the theme can't hold</h3><p>Subscriptions, bundles, B2B or custom checkout logic that apps handle badly.</p><span class="fix">▸ Fix: custom Shopify development</span></article>
+      <article class="find rv"><span class="big">06</span><div class="ln"><span>DEV-06</span><span class="sev md"><i></i>Medium</span></div><h3>A backlog no one can ship</h3><p>Improvements pile up with no in-house developer to release them reliably.</p><span class="fix">▸ Fix: ongoing dev on call</span></article>
+    </div>
+  </div>
+</section>
+
+<!-- MODULE 03 — THE FIX -->
+<section class="mod" id="fix">
+  <div class="wrap">
+    <div class="mod-head rv">
+      <div><div class="idx">Module 03</div><h2>The fix.</h2></div>
+      <div class="note">one senior team<br>design → development</div>
+    </div>
+    <div class="fixes">
+      <div class="fix-row rv"><span class="no">F/01</span><h3>Store design &amp; development</h3><p>Custom storefronts and theme builds, engineered around your catalogue — not a template's defaults.</p><div class="tags"><span>Custom themes</span><span>Shopify Plus</span><span>Brand system</span></div></div>
+      <div class="fix-row rv"><span class="no">F/02</span><h3>Product &amp; campaign pages</h3><p>PDPs and landing pages that present the offer clearly, with a clean path to purchase.</p><div class="tags"><span>PDP design</span><span>Landing pages</span><span>Storytelling</span></div></div>
+      <div class="fix-row rv"><span class="no">F/03</span><h3>Conversion &amp; speed</h3><p>Mobile UX, navigation and performance work that lifts the traffic you already have.</p><div class="tags"><span>Mobile UX</span><span>Core Web Vitals</span><span>CRO</span></div></div>
+      <div class="fix-row rv"><span class="no">F/04</span><h3>Ongoing development</h3><p>A dependable senior team on call for support, integrations and new features.</p><div class="tags"><span>Support</span><span>Integrations</span><span>New features</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MODULE 04 — EVIDENCE -->
+<section class="mod" id="evidence">
+  <div class="wrap">
+    <div class="mod-head rv">
+      <div><div class="idx">Module 04</div><h2>Evidence.</h2></div>
+      <div class="note">real stores · real numbers<br>shown with client permission</div>
+    </div>
+    <div class="evidence">
+      <article class="spec rv"><div class="im"><span class="tag">SPEC-01 · Nutrition</span><img src="img/meal.webp" alt="FuelYourBody"></div><div class="b"><span class="mono">FuelYourBody — gross sales</span><div class="num sig" data-count="2.11" data-prefix="$" data-suffix="M" data-dec="2">$0M</div><p>Replaced a stack of paid apps with a custom, faster storefront.</p></div></article>
+      <article class="spec rv"><div class="im"><span class="tag">SPEC-02 · Spirits</span><img src="img/bottle.webp" alt="Hanson of Sonoma" style="object-position:center 36%"></div><div class="b"><span class="mono">Hanson of Sonoma — gross revenue</span><div class="num sig" data-count="2.24" data-prefix="$" data-suffix="M" data-dec="2">$0M</div><p>Mobile-first rebuild with an optimised, premium checkout.</p></div></article>
+      <article class="spec rv"><div class="im"><span class="tag">SPEC-03 · Kids</span><img src="img/kids.webp" alt="Baby Gains"></div><div class="b"><span class="mono">Baby Gains — gross revenue</span><div class="num sig" data-count="2.66" data-prefix="$" data-suffix="M" data-dec="2">$0M</div><p>A dedicated B2B channel built on top of the storefront.</p></div></article>
+    </div>
+    <div class="tally rv">
+      <div class="c"><b data-count="60" data-suffix="+">0</b><span>Stores shipped</span></div>
+      <div class="c"><b data-count="98" data-suffix="%">0</b><span>Avg. perf. score</span></div>
+      <div class="c"><b data-count="6">0</b><span>Continents</span></div>
+      <div class="c"><b data-count="100" data-suffix="%">0</b><span>Senior-led</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- MODULE 05 — FIELD REPORTS -->
+<section class="mod" id="reports">
+  <div class="wrap">
+    <div class="mod-head rv">
+      <div><div class="idx">Module 05</div><h2>Field reports.</h2></div>
+      <div class="note">verified client feedback<br>post re-engineering</div>
+    </div>
+    <div class="reports">
+      <figure class="report rv"><div class="rtop"><span class="mono">LOG-01 · FuelYourBody</span><span class="stars">★★★★★</span></div><blockquote>"They delivered outstanding work and consistently went above and beyond."</blockquote><figcaption><img src="img/photo-rob.webp" alt="Rob C" loading="lazy"><span><b>Rob C</b><small>Founder, FuelYourBody</small></span></figcaption></figure>
+      <figure class="report rv"><div class="rtop"><span class="mono">LOG-02 · ElvyLab</span><span class="stars">★★★★★</span></div><blockquote>"You guys are very good at building websites and ecommerce pages."</blockquote><figcaption><img src="img/photo-lekha.webp" alt="Lekha V" loading="lazy"><span><b>Lekha V</b><small>Founder, ElvyLab</small></span></figcaption></figure>
+      <figure class="report rv"><div class="rtop"><span class="mono">LOG-03 · StrikeFunnels</span><span class="stars">★★★★★</span></div><blockquote>"You were awesome to work with. Great communication and always incredibly responsive."</blockquote><figcaption><img src="img/photo-chris.webp" alt="Chris L" loading="lazy"><span><b>Chris L</b><small>Founder, StrikeFunnels</small></span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- MODULE 06 — PROTOCOL (FAQ) -->
+<section class="mod" id="protocol">
+  <div class="wrap">
+    <div class="mod-head rv">
+      <div><div class="idx">Module 06</div><h2>Protocol.</h2></div>
+      <div class="note">common questions<br>answered straight</div>
+    </div>
+    <div class="faq rv">
+      <details><summary>Is the free store review really free?<span class="pm">+</span></summary><p>Yes, free and no-obligation. You get a senior-led review of your live store, the three highest-impact fixes, and a clear next step, usually within one business day.</p></details>
+      <details><summary>Can you build a new store from scratch, or migrate me to Shopify?<span class="pm">+</span></summary><p>Yes. We design and build new Shopify stores, including Shopify Plus, and can plan a move from another platform. We start with your catalogue, brand and goals, then agree scope before development.</p></details>
+      <details><summary>Do you work on Shopify and Shopify Plus?<span class="pm">+</span></summary><p>Yes. We're a Shopify Plus partner and work across both, from theme builds to custom functionality, subscriptions, B2B and integrations.</p></details>
+      <details><summary>Do I own the work you build?<span class="pm">+</span></summary><p>Completely. You own all code, design files and accounts, with no lock-in and optional ongoing support.</p></details>
+      <details><summary>How long does a build take, and what does it cost?<span class="pm">+</span></summary><p>Most builds run four to ten weeks depending on scope. After the audit we send a clear, itemised proposal, no surprise costs.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- MODULE 07 — REQUEST AUDIT -->
+<section class="mod" id="request">
+  <div class="wrap">
+    <div class="req rv">
+      <div class="mono">Module 07 — Book a call</div>
+      <div class="urg"><span class="udot"></span>Limited call slots this week · <b>book ahead</b></div>
+      <h2>Let's map your <span class="sig">next move</span>.</h2>
+      <p>Building, growing or maintaining — book a 30‑minute call and we'll talk through your store and a practical next step. Prefer proof first? Get a free store review.</p>
+      <div class="cta-row" style="display:flex;justify-content:center;margin-top:30px">
+        <a class="btn btn-p" href="https://calendly.com/digitalcraaft-agency/30min" target="_blank" rel="noopener">Book a 30‑min call →</a>
+      </div>
+      <div class="guar"><span>No obligation</span><span>Reply within 1 business day</span><span>You own everything we build</span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr wrap">
+  <span>© 2026 DigitalCraft — Store Audit System</span>
+  <span>info@digitalcraft-agency.com</span>
+</footer>
+
+<script>
+(function(){
+  var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.15});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+
+  /* typewriter finding line in hero */
+  var items=['a new Shopify store.','to grow an existing store.','ongoing maintenance & dev.','a free store review.'];
+  var te=document.getElementById('type'),ti=0,ci=0,del=false;
+  function tick(){ if(rm){te.textContent=items[0];return;} var w=items[ti];
+    te.textContent=w.slice(0,ci); if(!del){ci++; if(ci>w.length){del=true;setTimeout(tick,1100);return;}}
+    else{ci--; if(ci<0){del=false;ti=(ti+1)%items.length;ci=0;}}
+    setTimeout(tick,del?28:52);}
+  tick();
+
+  /* gauge + bars + readouts animate on load */
+  var SCORE=43, R=326.7;
+  function animGauge(){
+    var ring=document.getElementById('ring'),sN=document.getElementById('scoreN'),pct=document.getElementById('scanpct'),s=null;
+    function step(t){ if(!s)s=t; var k=Math.min(1,(t-s)/1600),e=1-Math.pow(1-k,3);
+      ring.style.strokeDashoffset=(R-R*(SCORE/100)*e).toFixed(1);
+      sN.textContent=Math.round(SCORE*e); pct.textContent=Math.round(100*e)+'%';
+      if(k<1)requestAnimationFrame(step); else pct.textContent='DONE';}
+    requestAnimationFrame(step);
+    document.querySelectorAll('.bar .t i').forEach(function(i){setTimeout(function(){i.style.width=i.dataset.w+'%';},300);});
+  }
+  var gi=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){animGauge();gi.disconnect();}});},{threshold:.4});
+  gi.observe(document.querySelector('.instr'));
+
+  /* number count-ups */
+  function cu(el){var t=parseFloat(el.dataset.count),dec=+(el.dataset.dec||0),suf=el.dataset.suffix||'',pre=el.dataset.prefix||'',s=null;
+    function step(ts){if(!s)s=ts;var k=Math.min(1,(ts-s)/1300),v=t*(1-Math.pow(1-k,3));
+      el.textContent=pre+(dec?v.toFixed(dec):Math.round(v).toLocaleString())+suf;if(k<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
+  var ni=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){cu(e.target);ni.unobserve(e.target);}});},{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(function(el){ni.observe(el);});
+
+  addEventListener('scroll',function(){var h=document.querySelector('.hud');h.style.background=scrollY>30?'rgba(7,7,8,.85)':'rgba(7,7,8,.72)';},{passive:true});
+})();
+</script>
+<script>
+(function(){
+  var f=document.getElementById('af'); if(!f) return;
+  f.addEventListener('submit',function(e){e.preventDefault();
+    var u=(document.getElementById('af-url').value||'').trim();
+    var sub='Free Shopify store audit request'+(u?(' — '+u):'');
+    var body='Store URL: '+(u||'(not provided)')+'\r\n\r\nPlease audit my Shopify store.';
+    location.href='mailto:info@digitalcraft-agency.com?subject='+encodeURIComponent(sub)+'&body='+encodeURIComponent(body);
+  });
+})();
+</script>
+</body>
+</html>
