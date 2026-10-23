@@ -168,10 +168,12 @@ main{position:relative;z-index:2}
 .trust{border-block:1px solid var(--line);background:var(--panel);position:relative;z-index:2}
 .trust-in{display:flex;align-items:center;gap:clamp(16px,2.6vw,36px);padding-block:16px;flex-wrap:wrap}
 .trust .tl{flex:none;color:var(--faint)}
-.tlogos{display:flex;align-items:center;gap:clamp(16px,2.6vw,34px);flex-wrap:wrap;flex:1;list-style:none;margin:0;padding:0}
-.tlogos li{height:20px;display:flex;align-items:center}
-.tlogos img{height:100%;width:auto;max-width:112px;object-fit:contain;filter:brightness(0) invert(1);opacity:.5;transition:opacity .3s}
-.tlogos img:hover{opacity:.95}
+.tlogos{flex:1;min-width:0;overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.tltrack{display:flex;align-items:center;gap:clamp(24px,3.4vw,44px);width:max-content;animation:tlticker 32s linear infinite}
+.tltrack img{height:20px;width:auto;max-width:120px;object-fit:contain;filter:brightness(0) invert(1);opacity:.5;transition:opacity .3s;flex:none}
+.tltrack img:hover{opacity:.95}
+.tlogos:hover .tltrack{animation-play-state:paused}
+@keyframes tlticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .tbadge{flex:none;display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line-2);border-radius:99px;padding:7px 13px;color:var(--bone)}
 .tbadge i{width:7px;height:7px;border-radius:50%;background:var(--live);box-shadow:0 0 8px var(--live)}
 
@@ -251,7 +253,7 @@ main{position:relative;z-index:2}
   .trust-in{flex-direction:column;align-items:flex-start;gap:16px}
   .tbadge{order:-1}
   .tl{order:0}
-  .tlogos{flex:1 1 100%;width:100%;justify-content:flex-start;gap:18px 28px}
+  .tlogos{width:100%;align-self:stretch}
 }
 </style>
 </head>
@@ -304,14 +306,7 @@ main{position:relative;z-index:2}
 <div class="trust">
   <div class="wrap trust-in">
     <span class="mono tl">Audited &amp; re-engineered for</span>
-    <ul class="tlogos">
-      <li><img src="img/logo-fuelyourbody.svg" alt="FuelYourBody" loading="lazy"></li>
-      <li><img src="img/logo-hanson.svg" alt="Hanson of Sonoma" loading="lazy"></li>
-      <li><img src="img/logo-babygains-t.png" alt="Baby Gains" loading="lazy"></li>
-      <li><img src="img/logo-matchaflix.svg" alt="Matchaflix" loading="lazy"></li>
-      <li><img src="img/logo-elvylab.avif" alt="ElvyLab" loading="lazy"></li>
-      <li><img src="img/logo-strike.webp" alt="StrikeFunnels" loading="lazy"></li>
-    </ul>
+    <div class="tlogos"><div class="tltrack"><img src="img/logo-fuelyourbody.svg" alt="FuelYourBody" loading="lazy"><img src="img/logo-hanson.svg" alt="Hanson of Sonoma" loading="lazy"><img src="img/logo-babygains-t.png" alt="Baby Gains" loading="lazy"><img src="img/logo-matchaflix.svg" alt="Matchaflix" loading="lazy"><img src="img/logo-elvylab.avif" alt="ElvyLab" loading="lazy"><img src="img/logo-strike.webp" alt="StrikeFunnels" loading="lazy"><img src="img/logo-fuelyourbody.svg" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-hanson.svg" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-babygains-t.png" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-matchaflix.svg" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-elvylab.avif" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-strike.webp" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-fuelyourbody.svg" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-hanson.svg" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-babygains-t.png" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-matchaflix.svg" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-elvylab.avif" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-strike.webp" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-fuelyourbody.svg" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-hanson.svg" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-babygains-t.png" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-matchaflix.svg" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-elvylab.avif" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-strike.webp" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-fuelyourbody.svg" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-hanson.svg" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-babygains-t.png" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-matchaflix.svg" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-elvylab.avif" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-strike.webp" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-fuelyourbody.svg" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-hanson.svg" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-babygains-t.png" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-matchaflix.svg" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-elvylab.avif" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-strike.webp" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-fuelyourbody.svg" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-hanson.svg" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-babygains-t.png" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-matchaflix.svg" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-elvylab.avif" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-strike.webp" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-fuelyourbody.svg" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-hanson.svg" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-babygains-t.png" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-matchaflix.svg" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-elvylab.avif" alt="" aria-hidden="true" loading="lazy"><img src="img/logo-strike.webp" alt="" aria-hidden="true" loading="lazy"></div></div>
     <span class="tbadge"><i></i>Shopify Plus Partner</span>
   </div>
 </div>
