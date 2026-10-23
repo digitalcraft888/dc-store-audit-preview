@@ -58,7 +58,7 @@ img,svg{display:block;max-width:100%}a{color:inherit;text-decoration:none}
 .hud .mid{color:var(--faint)}
 .hud .cta{font-family:var(--mono);font-size:11px;letter-spacing:.14em;border:1px solid var(--line-2);border-radius:4px;padding:8px 14px;color:var(--bone);transition:.3s}
 .hud .cta:hover{background:var(--bone);color:var(--ink)}
-@media(max-width:760px){.hud .mid{display:none}}
+@media(max-width:900px){.hud .mid{display:none}}
 
 main{position:relative;z-index:2}
 .mod{padding-block:clamp(70px,11vw,150px);position:relative}
@@ -247,6 +247,12 @@ main{position:relative;z-index:2}
 
 @media(max-width:920px){.tracks{grid-template-columns:1fr}}
 .need-line{margin:16px 0 0;font-size:clamp(16px,1.35vw,19px);line-height:1.5}
+@media(max-width:960px){
+  .trust-in{flex-direction:column;align-items:flex-start;gap:16px}
+  .tbadge{order:-1}
+  .tl{order:0}
+  .tlogos{flex:1 1 100%;width:100%;justify-content:flex-start;gap:18px 28px}
+}
 </style>
 </head>
 <body>
