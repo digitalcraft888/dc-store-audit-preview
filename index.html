@@ -212,8 +212,11 @@ main{position:relative;z-index:2}
 .guar span::before{content:"◆";color:var(--live);font-size:8px}
 
 @media(max-width:920px){
-  .hero-grid,.finds,.evidence,.tally,.reports{grid-template-columns:1fr}
+  .hero-grid,.finds,.evidence,.reports{grid-template-columns:1fr}
+  .tally{grid-template-columns:1fr 1fr}
   .tally .c{border-left:0;border-top:1px solid var(--line)}
+  .tally .c:nth-child(-n+2){border-top:0}
+  .tally .c:nth-child(even){border-left:1px solid var(--line)}
   .instr{margin-top:8px}
 }
 @media(max-width:560px){
