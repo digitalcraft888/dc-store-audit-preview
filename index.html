@@ -210,6 +210,47 @@ main{position:relative;z-index:2}
 .guar{position:relative;display:flex;gap:10px 22px;justify-content:center;flex-wrap:wrap;margin-top:22px;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
 .guar span{display:inline-flex;align-items:center;gap:7px}
 .guar span::before{content:"◆";color:var(--live);font-size:8px}
+/* ===== THE MATH (calculator) / MODULE 05 ===== */
+.calc{display:grid;grid-template-columns:1.05fr .95fr;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--panel);margin-top:30px}
+.calc .inputs{padding:clamp(26px,3.4vw,42px);border-right:1px solid var(--line)}
+.calc .field{margin-bottom:26px}
+.calc .field:last-child{margin-bottom:0}
+.calc .fl{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-bottom:12px}
+.calc .fv{color:var(--bone);font-size:13px;letter-spacing:.04em}
+.calc input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:3px;background:var(--line-2);border-radius:2px;outline:none;cursor:pointer}
+.calc input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:18px;height:18px;border-radius:50%;background:var(--bone);border:3px solid var(--ink);box-shadow:0 0 0 1px var(--line-2);transition:transform .2s}
+.calc input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.15)}
+.calc input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--bone);border:3px solid var(--ink);cursor:pointer}
+.calc .out{padding:clamp(26px,3.4vw,42px);background:linear-gradient(180deg,var(--panel-2),var(--ink));display:flex;flex-direction:column}
+.calc .lab{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.calc .big{font-family:var(--disp);font-weight:600;font-size:clamp(42px,6.4vw,76px);letter-spacing:-.04em;line-height:1;margin:10px 0 0}
+.calc .ba{display:flex;align-items:flex-end;gap:20px;margin:24px 0 4px}
+.calc .ba .k,.calc .yr .k{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-bottom:6px}
+.calc .ba b{font-family:var(--disp);font-weight:600;font-size:clamp(20px,2.4vw,28px);letter-spacing:-.02em}
+.calc .ba .arw{color:var(--faint);font-size:20px;padding-bottom:2px}
+.calc .yr{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);margin-top:18px;padding-top:18px}
+.calc .yr b{font-family:var(--disp);font-weight:600;font-size:clamp(20px,2.4vw,28px);color:var(--live)}
+.calc .disc{font-family:var(--mono);font-size:9.5px;line-height:1.5;letter-spacing:.04em;text-transform:none;color:var(--faint);margin:16px 0 0}
+/* ===== WHO THIS IS FOR / MODULE 07 ===== */
+.qual{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+.qcard{border:1px solid var(--line);border-radius:12px;padding:clamp(24px,3vw,38px);background:var(--panel)}
+.qcard.good{background:linear-gradient(180deg,rgba(43,213,118,.05),var(--panel))}
+.qcard h3{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 20px;display:flex;align-items:center;gap:10px;color:var(--bone)}
+.qcard .qd{width:8px;height:8px;border-radius:50%}
+.qcard.good .qd{background:var(--live);box-shadow:0 0 8px var(--live)}
+.qcard.bad .qd{background:var(--faint)}
+.qcard ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.qcard li{display:flex;gap:12px;font-size:clamp(14px,1.4vw,15.5px);line-height:1.45}
+.qcard li .ic{flex:none;font-size:13px;margin-top:3px}
+.qcard.good li{color:var(--bone)}
+.qcard.good li .ic{color:var(--live)}
+.qcard.bad li{color:var(--dim)}
+.qcard.bad li .ic{color:var(--faint)}
+@media(max-width:820px){
+  .calc{grid-template-columns:1fr}
+  .calc .inputs{border-right:0;border-bottom:1px solid var(--line)}
+  .qual{grid-template-columns:1fr}
+}
 
 @media(max-width:920px){
   .hero-grid,.finds,.evidence,.reports{grid-template-columns:1fr}
@@ -402,11 +443,53 @@ main{position:relative;z-index:2}
   </div>
 </section>
 
+<!-- MODULE 05 - THE MATH (ROI calculator) -->
+<section class="mod" id="math">
+  <div class="wrap">
+    <div class="mod-head rv">
+      <div><div class="idx">Module 05</div><h2>The math.</h2></div>
+      <div class="note">your store's numbers<br>drive the upside</div>
+    </div>
+    <div class="calc rv">
+      <div class="inputs">
+        <div class="field">
+          <div class="fl"><span>Monthly store visitors</span><span class="fv" id="c-vis-v">25,000</span></div>
+          <input type="range" id="c-vis" min="1000" max="200000" step="1000" value="25000" aria-label="Monthly store visitors">
+        </div>
+        <div class="field">
+          <div class="fl"><span>Current conversion rate</span><span class="fv" id="c-cvr-v">1.6%</span></div>
+          <input type="range" id="c-cvr" min="0.5" max="6" step="0.1" value="1.6" aria-label="Current conversion rate">
+        </div>
+        <div class="field">
+          <div class="fl"><span>Average order value</span><span class="fv" id="c-aov-v">$65</span></div>
+          <input type="range" id="c-aov" min="20" max="400" step="5" value="65" aria-label="Average order value">
+        </div>
+        <div class="field">
+          <div class="fl"><span>Target conversion lift</span><span class="fv" id="c-lift-v">+20%</span></div>
+          <input type="range" id="c-lift" min="10" max="40" step="5" value="20" aria-label="Target conversion lift">
+        </div>
+      </div>
+      <div class="out">
+        <span class="lab">Extra revenue / month</span>
+        <div class="big sig" id="c-extra">+$5,200</div>
+        <div class="ba">
+          <div><span class="k">Now</span><b id="c-now">$26,000</b></div>
+          <div class="arw">→</div>
+          <div><span class="k">After</span><b id="c-after">$31,200</b></div>
+        </div>
+        <div class="yr"><span class="k">Extra / year</span><b id="c-year">+$62,400</b></div>
+        <a class="btn btn-p" href="https://calendly.com/digitalcraaft-agency/30min" target="_blank" rel="noopener" style="margin-top:auto">Book a call →</a>
+        <p class="disc">Illustrative, from your inputs. Not a guarantee, we validate every lift with testing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- MODULE 05 - FIELD REPORTS -->
 <section class="mod" id="reports">
   <div class="wrap">
     <div class="mod-head rv">
-      <div><div class="idx">Module 05</div><h2>Field reports.</h2></div>
+      <div><div class="idx">Module 06</div><h2>Field reports.</h2></div>
       <div class="note">verified client feedback<br>post re-engineering</div>
     </div>
     <div class="reports">
@@ -417,11 +500,43 @@ main{position:relative;z-index:2}
   </div>
 </section>
 
+<!-- MODULE 07 - WHO THIS IS FOR -->
+<section class="mod" id="fit">
+  <div class="wrap">
+    <div class="mod-head rv">
+      <div><div class="idx">Module 07</div><h2>Who this is for.</h2></div>
+      <div class="note">straight talk<br>before you book</div>
+    </div>
+    <div class="qual rv">
+      <div class="qcard good">
+        <h3><span class="qd"></span>A fit if</h3>
+        <ul>
+          <li><span class="ic">✓</span>You're on Shopify, or moving to it, and selling online.</li>
+          <li><span class="ic">✓</span>You run ads and want more revenue from the same traffic.</li>
+          <li><span class="ic">✓</span>You want a senior team that owns the build end to end.</li>
+          <li><span class="ic">✓</span>You care about speed, UX and conversion, not just looks.</li>
+          <li><span class="ic">✓</span>You want to own your code, with no lock-in.</li>
+        </ul>
+      </div>
+      <div class="qcard bad">
+        <h3><span class="qd"></span>Not a fit if</h3>
+        <ul>
+          <li><span class="ic">✕</span>You just need the cheapest template, as fast as possible.</li>
+          <li><span class="ic">✕</span>You want a one-off logo or graphic only.</li>
+          <li><span class="ic">✕</span>You're not ready to act on what the review finds.</li>
+          <li><span class="ic">✕</span>You expect overnight results with no testing.</li>
+          <li><span class="ic">✕</span>You're not selling online, or planning to.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- MODULE 06 - PROTOCOL (FAQ) -->
 <section class="mod" id="protocol">
   <div class="wrap">
     <div class="mod-head rv">
-      <div><div class="idx">Module 06</div><h2>Protocol.</h2></div>
+      <div><div class="idx">Module 08</div><h2>Protocol.</h2></div>
       <div class="note">common questions<br>answered straight</div>
     </div>
     <div class="faq rv">
@@ -438,7 +553,7 @@ main{position:relative;z-index:2}
 <section class="mod" id="request">
   <div class="wrap">
     <div class="req rv">
-      <div class="mono">Module 07 · Book a call</div>
+      <div class="mono">Module 09 · Book a call</div>
       <div class="urg"><span class="udot"></span><b>Limited</b> call slots this week</div>
       <h2>Let's map your <span class="sig">next move</span>.</h2>
       <p>Building, growing or maintaining: book a 30‑minute call and we'll talk through your store and a practical next step. Prefer proof first? Get a free store review.</p>
@@ -491,6 +606,27 @@ main{position:relative;z-index:2}
       el.textContent=pre+(dec?v.toFixed(dec):Math.round(v).toLocaleString())+suf;if(k<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
   var ni=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){cu(e.target);ni.unobserve(e.target);}});},{threshold:.6});
   document.querySelectorAll('[data-count]').forEach(function(el){ni.observe(el);});
+
+  /* ROI calculator */
+  (function(){
+    var v=document.getElementById('c-vis'),cr=document.getElementById('c-cvr'),ao=document.getElementById('c-aov'),lf=document.getElementById('c-lift');
+    if(!v)return;
+    function money(n){return '$'+Math.round(n).toLocaleString();}
+    function upd(){
+      var vis=+v.value,cvr=+cr.value/100,aov=+ao.value,lift=+lf.value/100;
+      document.getElementById('c-vis-v').textContent=vis.toLocaleString();
+      document.getElementById('c-cvr-v').textContent=(+cr.value).toFixed(1)+'%';
+      document.getElementById('c-aov-v').textContent='$'+aov;
+      document.getElementById('c-lift-v').textContent='+'+lf.value+'%';
+      var now=vis*cvr*aov,extra=now*lift;
+      document.getElementById('c-extra').textContent='+'+money(extra);
+      document.getElementById('c-now').textContent=money(now);
+      document.getElementById('c-after').textContent=money(now+extra);
+      document.getElementById('c-year').textContent='+'+money(extra*12);
+    }
+    [v,cr,ao,lf].forEach(function(el){el.addEventListener('input',upd);});
+    upd();
+  })();
 
   addEventListener('scroll',function(){var h=document.querySelector('.hud');h.style.background=scrollY>30?'rgba(7,7,8,.85)':'rgba(7,7,8,.72)';},{passive:true});
 })();
