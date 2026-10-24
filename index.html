@@ -231,6 +231,10 @@ main{position:relative;z-index:2}
 .calc .yr{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);margin-top:18px;padding-top:18px}
 .calc .yr b{font-family:var(--disp);font-weight:600;font-size:clamp(20px,2.4vw,28px);color:var(--live)}
 .calc .disc{font-family:var(--mono);font-size:9.5px;line-height:1.5;letter-spacing:.04em;text-transform:none;color:var(--faint);margin:16px 0 0}
+.calc .bigsub{color:var(--dim);font-size:13px;margin-top:9px;letter-spacing:.02em}
+.calc .lab #c-lift-lab{color:var(--bone)}
+.calc .ba b em{font-style:normal;font-family:var(--mono);font-size:10px;color:var(--faint);margin-left:5px;letter-spacing:.06em}
+.calc .ba .aft{color:var(--live)}
 /* ===== WHO THIS IS FOR / MODULE 07 ===== */
 .qual{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
 .qcard{border:1px solid var(--line);border-radius:12px;padding:clamp(24px,3vw,38px);background:var(--panel)}
@@ -470,14 +474,15 @@ main{position:relative;z-index:2}
         </div>
       </div>
       <div class="out">
-        <span class="lab">Extra revenue / month</span>
+        <span class="lab">What a <b id="c-lift-lab">+20%</b> conversion lift is worth</span>
         <div class="big sig" id="c-extra">+$5,200</div>
+        <div class="bigsub">in extra revenue, every month</div>
         <div class="ba">
-          <div><span class="k">Now</span><b id="c-now">$26,000</b></div>
+          <div><span class="k">Your revenue now</span><b><span id="c-now">$26,000</span><em>/mo</em></b></div>
           <div class="arw">→</div>
-          <div><span class="k">After</span><b id="c-after">$31,200</b></div>
+          <div><span class="k">After the lift</span><b class="aft"><span id="c-after">$31,200</span><em>/mo</em></b></div>
         </div>
-        <div class="yr"><span class="k">Extra / year</span><b id="c-year">+$62,400</b></div>
+        <div class="yr"><span class="k">That's extra, per year</span><b id="c-year">+$62,400</b></div>
         <a class="btn btn-p" href="https://calendly.com/digitalcraaft-agency/30min" target="_blank" rel="noopener" style="margin-top:auto">Book a call →</a>
         <p class="disc">Illustrative, from your inputs. Not a guarantee, we validate every lift with testing.</p>
       </div>
@@ -618,6 +623,7 @@ main{position:relative;z-index:2}
       document.getElementById('c-cvr-v').textContent=(+cr.value).toFixed(1)+'%';
       document.getElementById('c-aov-v').textContent='$'+aov;
       document.getElementById('c-lift-v').textContent='+'+lf.value+'%';
+      document.getElementById('c-lift-lab').textContent='+'+lf.value+'%';
       var now=vis*cvr*aov,extra=now*lift;
       document.getElementById('c-extra').textContent='+'+money(extra);
       document.getElementById('c-now').textContent=money(now);
