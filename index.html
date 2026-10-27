@@ -58,7 +58,7 @@ img,svg{display:block;max-width:100%}a{color:inherit;text-decoration:none}
 .hud .mid{color:var(--faint)}
 .hud .cta{font-family:var(--mono);font-size:11px;letter-spacing:.14em;border:1px solid var(--line-2);border-radius:4px;padding:8px 14px;color:var(--bone);transition:.3s}
 .hud .cta:hover{background:var(--bone);color:var(--ink)}
-@media(max-width:900px){.hud .mid{display:none}}
+@media(max-width:900px){.hud .mid{display:none}.hud .cta{padding:11px 14px}}
 
 main{position:relative;z-index:2}
 .mod{padding-block:clamp(70px,11vw,150px);position:relative}
@@ -76,7 +76,10 @@ main{position:relative;z-index:2}
 
 /* ===== HERO / MODULE 01 ===== */
 .hero{padding-top:118px;min-height:100vh;display:flex;align-items:center}
-.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,4vw,64px);align-items:center;width:100%}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;grid-template-areas:"head instr" "cta instr";column-gap:clamp(30px,4vw,64px);row-gap:0;align-items:center;width:100%}
+.hero-head{grid-area:head}
+.hero-cta{grid-area:cta}
+.hero-grid .instr{grid-area:instr}
 .scan-label{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--dim);display:flex;align-items:center;gap:10px}
 .scan-label::before{content:"";width:34px;height:1px;background:var(--line-2)}
 .hero h1{font-family:var(--disp);font-weight:600;font-size:clamp(42px,6.6vw,96px);line-height:.92;letter-spacing:-.045em;margin:24px 0 0}
@@ -290,6 +293,7 @@ main{position:relative;z-index:2}
 
 @media(max-width:920px){
   .hero-grid,.finds,.evidence,.reports{grid-template-columns:1fr}
+  .hero-grid{grid-template-areas:"head" "instr" "cta"}
   .tally{grid-template-columns:1fr 1fr}
   .tally .c{border-left:0;border-top:1px solid var(--line)}
   .tally .c:nth-child(-n+2){border-top:0}
@@ -321,7 +325,7 @@ main{position:relative;z-index:2}
 .track ul{list-style:none;margin:4px 0 0;padding:14px 0 0;display:grid;gap:8px;border-top:1px solid var(--line)}
 .track li{font-family:var(--mono);font-size:11px;letter-spacing:.03em;color:var(--dim);display:flex;gap:9px;align-items:center;text-transform:none}
 .track li::before{content:"▸";color:var(--live);font-size:10px}
-.track .tcta{margin-top:auto;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--bone);border-top:1px solid var(--line);padding-top:16px;transition:color .3s}
+.track .tcta{margin-top:auto;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--bone);border-top:1px solid var(--line);padding:16px 0 8px;display:flex;align-items:center;min-height:30px;transition:color .3s}
 .track .tcta:hover{color:var(--live)}
 
 /* ---- "or" divider ---- */
@@ -350,20 +354,11 @@ main{position:relative;z-index:2}
 <!-- MODULE 01 - THE SCAN -->
 <section class="hero mod" id="scan">
   <div class="wrap hero-grid">
-    <div>
+    <div class="hero-head">
       <div class="scan-label">Shopify · build / grow / maintain</div>
       <h1 class="hh1"><span class="cl">Build&nbsp;it.</span> <span class="cl">Grow&nbsp;it.</span> <span class="cl sig">Keep&nbsp;it&nbsp;sharp.</span></h1>
       <p class="lede">One senior Shopify team to launch a new store, re‑engineer the one you have, and keep it shipping.</p>
       <p class="need-line"><span class="mono" style="color:var(--dim)">You need:&nbsp;</span><span id="type" style="color:var(--bone)"></span><span class="cursor"></span></p>
-      <div class="cta-row">
-        <a class="btn btn-p" href="https://calendly.com/digitalcraaft-agency/30min" target="_blank" rel="noopener">Book a 30‑min call</a>
-        <a class="btn btn-o" href="#tracks">See the tracks</a>
-      </div>
-      <div class="readout">
-        <div class="r"><b class="sig" data-count="18" data-suffix="%">0%</b><span>Avg. CVR lift</span></div>
-        <div class="r"><b data-count="1.4" data-suffix="s" data-dec="1">0s</b><span>Faster mobile</span></div>
-        <div class="r"><b data-count="150" data-suffix="K+">0</b><span>Customers served</span></div>
-      </div>
     </div>
 
     <div class="instr rv">
@@ -377,6 +372,18 @@ main{position:relative;z-index:2}
         <div class="bar"><span>Mobile speed</span><span class="t"><i data-w="41" style="background:var(--amber)"></i></span><span class="v">41</span></div>
         <div class="bar"><span>Merch / PDP</span><span class="t"><i data-w="52" style="background:var(--amber)"></i></span><span class="v">52</span></div>
         <div class="bar"><span>Retention</span><span class="t"><i data-w="38" style="background:var(--red)"></i></span><span class="v">38</span></div>
+      </div>
+    </div>
+
+    <div class="hero-cta">
+      <div class="cta-row">
+        <a class="btn btn-p" href="https://calendly.com/digitalcraaft-agency/30min" target="_blank" rel="noopener">Book a 30‑min call</a>
+        <a class="btn btn-o" href="#tracks">See the tracks</a>
+      </div>
+      <div class="readout">
+        <div class="r"><b class="sig" data-count="18" data-suffix="%">0%</b><span>Avg. CVR lift</span></div>
+        <div class="r"><b data-count="1.4" data-suffix="s" data-dec="1">0s</b><span>Faster mobile</span></div>
+        <div class="r"><b data-count="150" data-suffix="K+">0</b><span>Customers served</span></div>
       </div>
     </div>
   </div>
@@ -684,15 +691,27 @@ main{position:relative;z-index:2}
     requestAnimationFrame(step);
     document.querySelectorAll('.bar .t i').forEach(function(i){setTimeout(function(){i.style.width=i.dataset.w+'%';},300);});
   }
-  var gi=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){animGauge();gi.disconnect();}});},{threshold:.4});
-  gi.observe(document.querySelector('.instr'));
+  var gaugeDone=false;
+  function runGauge(){if(gaugeDone)return;gaugeDone=true;animGauge();}
+  var gi=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){runGauge();gi.disconnect();}});},{threshold:.4});
+  var instrEl=document.querySelector('.instr'); if(instrEl)gi.observe(instrEl);
 
   /* number count-ups */
-  function cu(el){var t=parseFloat(el.dataset.count),dec=+(el.dataset.dec||0),suf=el.dataset.suffix||'',pre=el.dataset.prefix||'',s=null;
+  var counted=new WeakSet();
+  function cu(el){if(counted.has(el))return;counted.add(el);var t=parseFloat(el.dataset.count),dec=+(el.dataset.dec||0),suf=el.dataset.suffix||'',pre=el.dataset.prefix||'',s=null;
     function step(ts){if(!s)s=ts;var k=Math.min(1,(ts-s)/1300),v=t*(1-Math.pow(1-k,3));
       el.textContent=pre+(dec?v.toFixed(dec):Math.round(v).toLocaleString())+suf;if(k<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
   var ni=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){cu(e.target);ni.unobserve(e.target);}});},{threshold:.6});
   document.querySelectorAll('[data-count]').forEach(function(el){ni.observe(el);});
+
+  /* fallback so reveals / counters / gauge still run if IntersectionObserver is throttled */
+  function inView(el,frac){if(!el)return false;var r=el.getBoundingClientRect(),vh=innerHeight||document.documentElement.clientHeight;return r.top<vh*frac && r.bottom>0;}
+  function sweep(){
+    document.querySelectorAll('.rv:not(.in)').forEach(function(el){if(inView(el,.98))el.classList.add('in');});
+    document.querySelectorAll('[data-count]').forEach(function(el){if(inView(el,.85))cu(el);});
+    if(inView(document.querySelector('.instr'),.75))runGauge();
+  }
+  addEventListener('load',sweep); addEventListener('resize',sweep,{passive:true}); sweep();
 
   /* what you get - tabs */
   (function(){
@@ -706,7 +725,7 @@ main{position:relative;z-index:2}
     });});
   })();
 
-  addEventListener('scroll',function(){var h=document.querySelector('.hud');h.style.background=scrollY>30?'rgba(7,7,8,.85)':'rgba(7,7,8,.72)';},{passive:true});
+  addEventListener('scroll',function(){var h=document.querySelector('.hud');h.style.background=scrollY>30?'rgba(7,7,8,.85)':'rgba(7,7,8,.72)';sweep();},{passive:true});
 })();
 </script>
 <script>
