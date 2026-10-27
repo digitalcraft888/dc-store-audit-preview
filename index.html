@@ -313,6 +313,12 @@ main{position:relative;z-index:2}
 .hh1{text-wrap:balance}
 .hh1 .cl{display:inline-block}
 
+/* ---- mod-head: note reads as a subtitle under the title on small screens ---- */
+@media(max-width:700px){
+  .mod-head{gap:6px}
+  .mod-head .note{text-align:left}
+}
+
 /* ---- TRACKS (build / grow / maintain) ---- */
 .tracks{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
 .track{border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:28px clamp(22px,2.4vw,30px);display:flex;flex-direction:column;gap:14px;transition:transform .4s cubic-bezier(.19,1,.22,1),border-color .4s,box-shadow .4s}
