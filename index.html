@@ -225,6 +225,42 @@ main{position:relative;z-index:2}
 .waymeta{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:28px;padding-top:22px;border-top:1px solid var(--line);font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
 .waymeta span{display:inline-flex;align-items:center;gap:7px}
 .waymeta span::before{content:"◆";color:var(--live);font-size:8px}
+/* ===== HOW IT WORKS / MODULE 06 ===== */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);margin-top:30px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel)}
+.step{padding:clamp(26px,2.6vw,38px);border-right:1px solid var(--line)}
+.step:last-child{border-right:0}
+.step .snum{font-family:var(--disp);font-weight:600;font-size:clamp(26px,2.6vw,36px);letter-spacing:-.02em;line-height:1}
+.step h3{font-family:var(--disp);font-weight:600;font-size:clamp(18px,1.7vw,22px);letter-spacing:-.02em;margin:16px 0 10px}
+.step p{color:var(--dim);font-size:clamp(13.5px,1.3vw,14.5px);line-height:1.5;margin:0}
+/* ===== WHY US (comparison) / MODULE 09 ===== */
+.cmp{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel);margin-top:30px}
+.cmp>div{padding:15px 18px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:center;text-align:center;font-size:clamp(16px,1.6vw,19px)}
+.cmp .cl{justify-content:flex-start;text-align:left;color:var(--bone);font-size:clamp(13px,1.3vw,14.5px);line-height:1.35}
+.cmp .cc,.cmp .ch{border-left:1px solid var(--line)}
+.cmp .ch{border-top:0;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.cmp .ch.best{color:var(--ink);background:var(--bone);font-weight:700}
+.cmp .cc.best{background:rgba(236,234,227,.045)}
+.cmp .yes{color:var(--live)}
+.cmp .part{color:var(--amber)}
+.cmp .no{color:var(--red)}
+.cmp-foot{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--faint);text-transform:none;margin:16px 0 0}
+@media(max-width:820px){
+  .cmp{grid-template-columns:1.5fr .85fr .85fr .95fr}
+  .cmp>div{padding:12px 7px;font-size:16px}
+  .cmp .cl{font-size:12px}
+  .cmp .ch{font-size:8.5px;letter-spacing:.03em;padding:9px 4px}
+}
+@media(min-width:481px) and (max-width:820px){
+  .steps{grid-template-columns:1fr 1fr}
+  .step{border-right:0;border-bottom:1px solid var(--line)}
+  .step:nth-child(odd){border-right:1px solid var(--line)}
+  .step:nth-child(3),.step:nth-child(4){border-bottom:0}
+}
+@media(max-width:480px){
+  .steps{grid-template-columns:1fr}
+  .step{border-right:0;border-bottom:1px solid var(--line)}
+  .step:last-child{border-bottom:0}
+}
 /* ===== WHO THIS IS FOR / MODULE 07 ===== */
 .qual{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
 .qcard{border:1px solid var(--line);border-radius:12px;padding:clamp(24px,3vw,38px);background:var(--panel)}
@@ -493,11 +529,27 @@ main{position:relative;z-index:2}
   </div>
 </section>
 
+<!-- MODULE 06 - HOW IT WORKS -->
+<section class="mod" id="process">
+  <div class="wrap">
+    <div class="mod-head rv">
+      <div><div class="idx">Module 06</div><h2>How it works.</h2></div>
+      <div class="note">from first call<br>to live store</div>
+    </div>
+    <div class="steps rv">
+      <div class="step"><div class="snum sig">01</div><h3>Audit &amp; call</h3><p>We review your store or brief on a 30-minute call, then share the highest-impact opportunities.</p></div>
+      <div class="step"><div class="snum sig">02</div><h3>Plan &amp; scope</h3><p>You get a clear, itemised proposal: what we build, the timeline and a fixed price. No surprises.</p></div>
+      <div class="step"><div class="snum sig">03</div><h3>Design &amp; build</h3><p>A senior team designs and hand-codes your store, with visible progress and your feedback at each step.</p></div>
+      <div class="step"><div class="snum sig">04</div><h3>Ship &amp; support</h3><p>We QA on real devices, launch, hand everything over, and stay on for support if you want it.</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- MODULE 05 - FIELD REPORTS -->
 <section class="mod" id="reports">
   <div class="wrap">
     <div class="mod-head rv">
-      <div><div class="idx">Module 06</div><h2>Field reports.</h2></div>
+      <div><div class="idx">Module 07</div><h2>Field reports.</h2></div>
       <div class="note">verified client feedback<br>post re-engineering</div>
     </div>
     <div class="reports">
@@ -512,7 +564,7 @@ main{position:relative;z-index:2}
 <section class="mod" id="fit">
   <div class="wrap">
     <div class="mod-head rv">
-      <div><div class="idx">Module 07</div><h2>Who this is for.</h2></div>
+      <div><div class="idx">Module 08</div><h2>Who this is for.</h2></div>
       <div class="note">straight talk<br>before you book</div>
     </div>
     <div class="qual rv">
@@ -540,11 +592,32 @@ main{position:relative;z-index:2}
   </div>
 </section>
 
+<!-- MODULE 09 - WHY US (comparison) -->
+<section class="mod" id="compare">
+  <div class="wrap">
+    <div class="mod-head rv">
+      <div><div class="idx">Module 09</div><h2>Why not go cheaper?</h2></div>
+      <div class="note">what you trade away<br>with the shortcuts</div>
+    </div>
+    <div class="cmp rv">
+        <div class="cl"></div><div class="ch">Template</div><div class="ch">Freelancer</div><div class="ch best">DigitalCraft</div>
+        <div class="cl">Designed around your catalogue &amp; brand</div><div class="cc no">✕</div><div class="cc part">~</div><div class="cc yes best">✓</div>
+        <div class="cl">Fast, mobile-first, speed-tuned</div><div class="cc part">~</div><div class="cc part">~</div><div class="cc yes best">✓</div>
+        <div class="cl">Custom features without app bloat</div><div class="cc no">✕</div><div class="cc part">~</div><div class="cc yes best">✓</div>
+        <div class="cl">A senior team, end to end</div><div class="cc no">✕</div><div class="cc no">✕</div><div class="cc yes best">✓</div>
+        <div class="cl">You own all the code, no lock-in</div><div class="cc yes">✓</div><div class="cc yes">✓</div><div class="cc yes best">✓</div>
+        <div class="cl">QA &amp; real support after launch</div><div class="cc no">✕</div><div class="cc part">~</div><div class="cc yes best">✓</div>
+        <div class="cl">Shopify Plus &amp; platform migrations</div><div class="cc no">✕</div><div class="cc part">~</div><div class="cc yes best">✓</div>
+    </div>
+    <p class="cmp-foot">~ depends who you hire. We put scope, price and timeline in writing before we start.</p>
+  </div>
+</section>
+
 <!-- MODULE 06 - PROTOCOL (FAQ) -->
 <section class="mod" id="protocol">
   <div class="wrap">
     <div class="mod-head rv">
-      <div><div class="idx">Module 08</div><h2>Protocol.</h2></div>
+      <div><div class="idx">Module 10</div><h2>Protocol.</h2></div>
       <div class="note">common questions<br>answered straight</div>
     </div>
     <div class="faq rv">
@@ -561,7 +634,7 @@ main{position:relative;z-index:2}
 <section class="mod" id="request">
   <div class="wrap">
     <div class="req rv">
-      <div class="mono">Module 09 · Book a call</div>
+      <div class="mono">Module 11 · Book a call</div>
       <div class="urg"><span class="udot"></span><b>Limited</b> call slots this week</div>
       <h2>Let's map your <span class="sig">next move</span>.</h2>
       <p>Building, growing or maintaining: book a 30‑minute call and we'll talk through your store and a practical next step. Prefer proof first? Get a free store review.</p>
