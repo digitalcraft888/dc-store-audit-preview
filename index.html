@@ -191,6 +191,12 @@ main{position:relative;z-index:2}
 .report figcaption img{width:42px;height:42px;border-radius:50%;object-fit:cover}
 .report b{display:block;font-family:var(--disp);font-weight:600;font-size:14px}
 .report small{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--dim);text-transform:uppercase}
+.report .proj{font-family:var(--mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--dim);border:1px solid var(--line);border-radius:99px;padding:5px 11px}
+.report figcaption img{border:1px solid var(--line-2)}
+.report .who{display:flex;flex-direction:column;gap:3px}
+.report .who b{display:inline-flex;align-items:center;gap:7px}
+.report .vtick{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:rgba(43,213,118,.15);color:var(--live);font-size:9px;font-style:normal;flex:none}
+.reports-foot{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;color:var(--faint);margin:20px 0 0}
 
 /* ---- PROTOCOL / FAQ ---- */
 .faq{margin-top:40px;border-top:1px solid var(--line)}
@@ -570,13 +576,14 @@ main{position:relative;z-index:2}
   <div class="wrap">
     <div class="mod-head rv">
       <div><div class="idx">Module 07</div><h2>Field reports.</h2></div>
-      <div class="note">verified client feedback<br>post re-engineering</div>
+      <div class="note">rated 5.0 by clients<br>shown with permission</div>
     </div>
     <div class="reports">
-      <figure class="report rv"><div class="rtop"><span class="mono">LOG-01 · FuelYourBody</span><span class="stars">★★★★★</span></div><blockquote>"They delivered outstanding work and consistently went above and beyond."</blockquote><figcaption><img src="img/photo-rob.webp" alt="Rob C" loading="lazy"><span><b>Rob C</b><small>Founder, FuelYourBody</small></span></figcaption></figure>
-      <figure class="report rv"><div class="rtop"><span class="mono">LOG-02 · ElvyLab</span><span class="stars">★★★★★</span></div><blockquote>"You guys are very good at building websites and ecommerce pages."</blockquote><figcaption><img src="img/photo-lekha.webp" alt="Lekha V" loading="lazy"><span><b>Lekha V</b><small>Founder, ElvyLab</small></span></figcaption></figure>
-      <figure class="report rv"><div class="rtop"><span class="mono">LOG-03 · StrikeFunnels</span><span class="stars">★★★★★</span></div><blockquote>"You were awesome to work with. Great communication and always incredibly responsive."</blockquote><figcaption><img src="img/photo-chris.webp" alt="Chris L" loading="lazy"><span><b>Chris L</b><small>Founder, StrikeFunnels</small></span></figcaption></figure>
+      <figure class="report rv"><div class="rtop"><span class="proj">Custom storefront rebuild</span><span class="stars">★★★★★</span></div><blockquote>"They delivered outstanding work and consistently went above and beyond."</blockquote><figcaption><img src="img/photo-rob.webp" alt="Rob C" loading="lazy"><span class="who"><b>Rob C <i class="vtick" title="Verified client">✓</i></b><small>Founder, FuelYourBody</small></span></figcaption></figure>
+      <figure class="report rv"><div class="rtop"><span class="proj">Store design &amp; build</span><span class="stars">★★★★★</span></div><blockquote>"You guys are very good at building websites and ecommerce pages."</blockquote><figcaption><img src="img/photo-lekha.webp" alt="Lekha V" loading="lazy"><span class="who"><b>Lekha V <i class="vtick" title="Verified client">✓</i></b><small>Founder, ElvyLab</small></span></figcaption></figure>
+      <figure class="report rv"><div class="rtop"><span class="proj">Custom Shopify build</span><span class="stars">★★★★★</span></div><blockquote>"You were awesome to work with. Great communication and always incredibly responsive."</blockquote><figcaption><img src="img/photo-chris.webp" alt="Chris L" loading="lazy"><span class="who"><b>Chris L <i class="vtick" title="Verified client">✓</i></b><small>Founder, StrikeFunnels</small></span></figcaption></figure>
     </div>
+    <p class="reports-foot">Every quote is from a real client. Names and brands shown with their permission.</p>
   </div>
 </section>
 
