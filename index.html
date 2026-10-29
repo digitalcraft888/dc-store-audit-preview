@@ -247,13 +247,18 @@ main{position:relative;z-index:2}
 .waymeta{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:28px;padding-top:22px;border-top:1px solid var(--line);font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
 .waymeta span{display:inline-flex;align-items:center;gap:7px}
 .waymeta span::before{content:"◆";color:var(--live);font-size:8px}
-/* ===== HOW IT WORKS / MODULE 06 ===== */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);margin-top:30px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel)}
-.step{padding:clamp(26px,2.6vw,38px);border-right:1px solid var(--line)}
-.step:last-child{border-right:0}
-.step .snum{font-family:var(--disp);font-weight:600;font-size:clamp(26px,2.6vw,36px);letter-spacing:-.02em;line-height:1}
-.step h3{font-family:var(--disp);font-weight:600;font-size:clamp(18px,1.7vw,22px);letter-spacing:-.02em;margin:16px 0 10px}
-.step p{color:var(--dim);font-size:clamp(13.5px,1.3vw,14.5px);line-height:1.5;margin:0}
+/* ===== HOW IT WORKS / MODULE 07 ===== */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);margin-top:52px;position:relative}
+.steps::before{content:"";position:absolute;top:27px;left:12.5%;right:12.5%;height:2px;border-radius:2px;background:linear-gradient(90deg,rgba(43,213,118,.55),rgba(16,179,176,.55),rgba(46,124,246,.55),rgba(232,76,154,.55))}
+.step{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 clamp(10px,1.5vw,22px)}
+.snode{position:relative;z-index:2;width:56px;height:56px;border-radius:50%;background:var(--ink);border:1px solid var(--line-2);display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-weight:600;font-size:22px;letter-spacing:-.02em;margin-bottom:24px;transition:transform .4s cubic-bezier(.19,1,.22,1),box-shadow .4s}
+.step:hover .snode{transform:translateY(-4px)}
+.step:nth-child(1) .snode{color:#2BD576;border-color:rgba(43,213,118,.5);box-shadow:0 0 26px -8px rgba(43,213,118,.65)}
+.step:nth-child(2) .snode{color:#10B3B0;border-color:rgba(16,179,176,.5);box-shadow:0 0 26px -8px rgba(16,179,176,.65)}
+.step:nth-child(3) .snode{color:#2E7CF6;border-color:rgba(46,124,246,.5);box-shadow:0 0 26px -8px rgba(46,124,246,.65)}
+.step:nth-child(4) .snode{color:#E84C9A;border-color:rgba(232,76,154,.5);box-shadow:0 0 26px -8px rgba(232,76,154,.65)}
+.step h3{font-family:var(--disp);font-weight:600;font-size:clamp(18px,1.7vw,22px);letter-spacing:-.02em;margin:0 0 10px}
+.step p{color:var(--dim);font-size:clamp(13.5px,1.3vw,14.5px);line-height:1.55;margin:0;max-width:30ch}
 /* ===== WHY US (comparison) / MODULE 09 ===== */
 .cmp{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel);margin-top:30px}
 .cmp>div{padding:15px 18px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:center;text-align:center;font-size:clamp(16px,1.6vw,19px)}
@@ -278,16 +283,15 @@ main{position:relative;z-index:2}
   .cmp .besttag{display:none}
   .cmp .m{width:28px;height:28px;font-size:14px}
 }
-@media(min-width:481px) and (max-width:820px){
-  .steps{grid-template-columns:1fr 1fr}
-  .step{border-right:0;border-bottom:1px solid var(--line)}
-  .step:nth-child(odd){border-right:1px solid var(--line)}
-  .step:nth-child(3),.step:nth-child(4){border-bottom:0}
-}
-@media(max-width:480px){
-  .steps{grid-template-columns:1fr}
-  .step{border-right:0;border-bottom:1px solid var(--line)}
-  .step:last-child{border-bottom:0}
+@media(max-width:820px){
+  .steps{grid-template-columns:1fr;margin-top:38px}
+  .steps::before{display:none}
+  .step{flex-direction:row;align-items:flex-start;text-align:left;gap:18px;padding:0 0 34px}
+  .step:last-child{padding-bottom:0}
+  .snode{margin-bottom:0;flex:none;width:50px;height:50px;font-size:20px}
+  .step:not(:last-child)::after{content:"";position:absolute;left:24px;top:56px;bottom:-22px;width:2px;background:var(--line-2)}
+  .step .stext h3{margin-top:11px}
+  .step p{max-width:none}
 }
 /* ===== WHO THIS IS FOR / MODULE 07 ===== */
 .qual{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
@@ -596,10 +600,10 @@ main{position:relative;z-index:2}
       <div class="note">from first call<br>to live store</div>
     </div>
     <div class="steps rv">
-      <div class="step"><div class="snum sig">01</div><h3>Audit &amp; call</h3><p>We review your store or brief on a 30-minute call, then share the highest-impact opportunities.</p></div>
-      <div class="step"><div class="snum sig">02</div><h3>Plan &amp; scope</h3><p>You get a clear, itemised proposal: what we build, the timeline and a fixed price. No surprises.</p></div>
-      <div class="step"><div class="snum sig">03</div><h3>Design &amp; build</h3><p>A senior team designs and hand-codes your store, with visible progress and your feedback at each step.</p></div>
-      <div class="step"><div class="snum sig">04</div><h3>Ship &amp; support</h3><p>We QA on real devices, launch, hand everything over, and stay on for support if you want it.</p></div>
+      <div class="step"><div class="snode"><span class="n">01</span></div><div class="stext"><h3>Audit &amp; call</h3><p>We review your store or brief on a 30-minute call, then share the highest-impact opportunities.</p></div></div>
+      <div class="step"><div class="snode"><span class="n">02</span></div><div class="stext"><h3>Plan &amp; scope</h3><p>You get a clear, itemised proposal: what we build, the timeline and a fixed price. No surprises.</p></div></div>
+      <div class="step"><div class="snode"><span class="n">03</span></div><div class="stext"><h3>Design &amp; build</h3><p>A senior team designs and hand-codes your store, with visible progress and your feedback at each step.</p></div></div>
+      <div class="step"><div class="snode"><span class="n">04</span></div><div class="stext"><h3>Ship &amp; support</h3><p>We QA on real devices, launch, hand everything over, and stay on for support if you want it.</p></div></div>
     </div>
   </div>
 </section>
