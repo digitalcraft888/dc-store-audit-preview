@@ -133,18 +133,23 @@ main{position:relative;z-index:2}
 
 /* ===== EVIDENCE / MODULE 04 ===== */
 .evidence{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
-.spec{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel);transition:transform .45s cubic-bezier(.19,1,.22,1),border-color .4s}
-.spec:hover{transform:translateY(-6px);border-color:var(--line-2)}
+.spec{position:relative;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel);transition:transform .45s cubic-bezier(.19,1,.22,1),border-color .4s,box-shadow .4s}
+.spec:hover{transform:translateY(-6px);border-color:var(--line-2);box-shadow:0 26px 60px -28px rgba(0,0,0,.75)}
 .spec .im{aspect-ratio:4/3;overflow:hidden;position:relative;background:#16171a}
 .spec .im img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
 .spec:hover .im img{transform:scale(1.05)}
+.spec::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--signal);transform:scaleX(0);transform-origin:left;transition:transform .55s cubic-bezier(.19,1,.22,1);z-index:3}
+.spec:hover::before{transform:scaleX(1)}
+.spec .im::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 58%,rgba(7,7,8,.55));pointer-events:none}
 .spec .im .tag{position:absolute;top:12px;left:12px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;background:rgba(7,7,8,.8);border:1px solid var(--line-2);border-radius:4px;padding:5px 9px;color:var(--bone)}
 .spec .b{padding:22px 24px 26px}
 .spec .b .mono{display:block;margin-bottom:10px}
 .spec .b .num{font-family:var(--disp);font-weight:600;font-size:clamp(34px,4vw,52px);letter-spacing:-.04em;line-height:1}
 .spec .b p{color:var(--dim);font-size:13.5px;margin:10px 0 0}
-.tally{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:12px;margin-top:20px;overflow:hidden;background:var(--panel)}
-.tally .c{padding:30px 26px;border-left:1px solid var(--line)}
+.tally{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:12px;margin-top:20px;overflow:hidden;background:var(--panel);position:relative}
+.tally .c{padding:30px 26px;border-left:1px solid var(--line);transition:background .3s}
+.tally .c:hover{background:var(--panel-2)}
+.tally::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--signal);opacity:.35;z-index:2}
 .tally .c:first-child{border-left:0}
 .tally .c b{font-family:var(--disp);font-weight:600;font-size:clamp(30px,3.6vw,50px);letter-spacing:-.04em;display:block}
 .tally .c span{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--dim);text-transform:uppercase;margin-top:8px;display:block}
@@ -486,11 +491,31 @@ main{position:relative;z-index:2}
   </div>
 </section>
 
-<!-- MODULE 04 - EVIDENCE -->
+<!-- MODULE 04 - FIELD REPORTS -->
+<section class="mod" id="reports">
+  <div class="wrap">
+    <div class="mod-head rv">
+      <div><div class="idx">Module 04</div><h2>Field reports.</h2></div>
+      <div class="note">rated 5.0 by clients<br>shown with permission</div>
+    </div>
+    <div class="rsum rv">
+      <div class="rscore"><span class="stars big">★★★★★</span><b>5.0</b></div>
+      <p>Real feedback from the founders whose Shopify stores we’ve built, rebuilt and kept shipping.</p>
+    </div>
+    <div class="reports">
+      <figure class="report rv"><div class="rtop"><span class="proj">Custom storefront rebuild</span><span class="stars">★★★★★</span></div><span class="qmark">“</span><blockquote>They delivered outstanding work and consistently went above and beyond.</blockquote><figcaption><img src="img/photo-rob.webp" alt="Rob C" loading="lazy"><span class="who"><b>Rob C <i class="vtick" title="Verified client">✓</i></b><small>Founder, FuelYourBody</small></span></figcaption></figure>
+      <figure class="report rv"><div class="rtop"><span class="proj">Store design &amp; build</span><span class="stars">★★★★★</span></div><span class="qmark">“</span><blockquote>You guys are very good at building websites and ecommerce pages.</blockquote><figcaption><img src="img/photo-lekha.webp" alt="Lekha V" loading="lazy"><span class="who"><b>Lekha V <i class="vtick" title="Verified client">✓</i></b><small>Founder, ElvyLab</small></span></figcaption></figure>
+      <figure class="report rv"><div class="rtop"><span class="proj">Custom Shopify build</span><span class="stars">★★★★★</span></div><span class="qmark">“</span><blockquote>You were awesome to work with. Great communication and always incredibly responsive.</blockquote><figcaption><img src="img/photo-chris.webp" alt="Chris L" loading="lazy"><span class="who"><b>Chris L <i class="vtick" title="Verified client">✓</i></b><small>Founder, StrikeFunnels</small></span></figcaption></figure>
+    </div>
+    <p class="reports-foot">Every quote is from a real client. Names and brands shown with their permission.</p>
+  </div>
+</section>
+
+<!-- MODULE 05 - EVIDENCE -->
 <section class="mod" id="evidence">
   <div class="wrap">
     <div class="mod-head rv">
-      <div><div class="idx">Module 04</div><h2>Evidence.</h2></div>
+      <div><div class="idx">Module 05</div><h2>Evidence.</h2></div>
       <div class="note">real stores · real numbers<br>shown with client permission</div>
     </div>
     <div class="evidence">
@@ -507,11 +532,11 @@ main{position:relative;z-index:2}
   </div>
 </section>
 
-<!-- MODULE 05 - WHAT YOU GET -->
+<!-- MODULE 06 - WHAT YOU GET -->
 <section class="mod" id="deliver">
   <div class="wrap">
     <div class="mod-head rv">
-      <div><div class="idx">Module 05</div><h2>What you get.</h2></div>
+      <div><div class="idx">Module 06</div><h2>What you get.</h2></div>
       <div class="note">concrete deliverables<br>no vague promises</div>
     </div>
     <div class="ways rv">
@@ -563,11 +588,11 @@ main{position:relative;z-index:2}
   </div>
 </section>
 
-<!-- MODULE 06 - HOW IT WORKS -->
+<!-- MODULE 07 - HOW IT WORKS -->
 <section class="mod" id="process">
   <div class="wrap">
     <div class="mod-head rv">
-      <div><div class="idx">Module 06</div><h2>How it works.</h2></div>
+      <div><div class="idx">Module 07</div><h2>How it works.</h2></div>
       <div class="note">from first call<br>to live store</div>
     </div>
     <div class="steps rv">
@@ -576,26 +601,6 @@ main{position:relative;z-index:2}
       <div class="step"><div class="snum sig">03</div><h3>Design &amp; build</h3><p>A senior team designs and hand-codes your store, with visible progress and your feedback at each step.</p></div>
       <div class="step"><div class="snum sig">04</div><h3>Ship &amp; support</h3><p>We QA on real devices, launch, hand everything over, and stay on for support if you want it.</p></div>
     </div>
-  </div>
-</section>
-
-<!-- MODULE 05 - FIELD REPORTS -->
-<section class="mod" id="reports">
-  <div class="wrap">
-    <div class="mod-head rv">
-      <div><div class="idx">Module 07</div><h2>Field reports.</h2></div>
-      <div class="note">rated 5.0 by clients<br>shown with permission</div>
-    </div>
-    <div class="rsum rv">
-      <div class="rscore"><span class="stars big">★★★★★</span><b>5.0</b></div>
-      <p>Real feedback from the founders whose Shopify stores we’ve built, rebuilt and kept shipping.</p>
-    </div>
-    <div class="reports">
-      <figure class="report rv"><div class="rtop"><span class="proj">Custom storefront rebuild</span><span class="stars">★★★★★</span></div><span class="qmark">“</span><blockquote>They delivered outstanding work and consistently went above and beyond.</blockquote><figcaption><img src="img/photo-rob.webp" alt="Rob C" loading="lazy"><span class="who"><b>Rob C <i class="vtick" title="Verified client">✓</i></b><small>Founder, FuelYourBody</small></span></figcaption></figure>
-      <figure class="report rv"><div class="rtop"><span class="proj">Store design &amp; build</span><span class="stars">★★★★★</span></div><span class="qmark">“</span><blockquote>You guys are very good at building websites and ecommerce pages.</blockquote><figcaption><img src="img/photo-lekha.webp" alt="Lekha V" loading="lazy"><span class="who"><b>Lekha V <i class="vtick" title="Verified client">✓</i></b><small>Founder, ElvyLab</small></span></figcaption></figure>
-      <figure class="report rv"><div class="rtop"><span class="proj">Custom Shopify build</span><span class="stars">★★★★★</span></div><span class="qmark">“</span><blockquote>You were awesome to work with. Great communication and always incredibly responsive.</blockquote><figcaption><img src="img/photo-chris.webp" alt="Chris L" loading="lazy"><span class="who"><b>Chris L <i class="vtick" title="Verified client">✓</i></b><small>Founder, StrikeFunnels</small></span></figcaption></figure>
-    </div>
-    <p class="reports-foot">Every quote is from a real client. Names and brands shown with their permission.</p>
   </div>
 </section>
 
